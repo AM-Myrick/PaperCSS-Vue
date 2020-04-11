@@ -1,8 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
-
-Vue.config.productionTip = false
+import Vue from "vue";
+import App from "./App.vue";
+import store from "./store";
+import router from "./router";
+import "papercss/docs/static/assets/paper.min.css";
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  store,
+  el: "#app",
+  render: h => h(App)
+});
