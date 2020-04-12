@@ -15,16 +15,14 @@
         name="content"
         class="edit-textBody"
       ></textarea>
-      <button class="default save" type="submit">
-        Save
-      </button>
+      <button class="default save" type="submit">Save</button>
     </form>
   </section>
 </template>
 
 <script>
 export default {
-  mounted() {
+  beforeCreate() {
     if (this.$store.state.notesLoaded) {
       this.$store.commit("setSelectedNote", { routeId: this.$route.params.id });
     } else {

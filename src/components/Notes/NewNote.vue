@@ -15,9 +15,7 @@
         name="content"
         class="new-textBody"
       ></textarea>
-      <button class="default save" type="submit">
-        Save
-      </button>
+      <button class="default save" type="submit">Save</button>
     </form>
   </section>
 </template>
@@ -32,7 +30,7 @@ export default {
       }
     };
   },
-  mounted() {
+  beforeCreate() {
     this.$store.commit("createAuthHeader");
   },
   methods: {

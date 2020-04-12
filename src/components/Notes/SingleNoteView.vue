@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  mounted() {
+  beforeCreate() {
     if (this.$store.state.notesLoaded) {
       this.$store.commit("setSelectedNote", { routeId: this.$route.params.id });
     } else {

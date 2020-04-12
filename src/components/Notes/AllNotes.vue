@@ -17,11 +17,7 @@
     </div>
     <h2>Your Notes:</h2>
     <div class="notes">
-      <app-note-card
-        v-for="note of notes"
-        :key="note.id"
-        :note="note"
-      ></app-note-card>
+      <app-note-card v-for="note of notes" :key="note.id" :note="note"></app-note-card>
     </div>
   </section>
 </template>
@@ -33,7 +29,7 @@ export default {
   components: {
     appNoteCard: NoteCard
   },
-  mounted() {
+  beforeCreate() {
     this.$store.dispatch("getUserNotes");
   },
   computed: {
